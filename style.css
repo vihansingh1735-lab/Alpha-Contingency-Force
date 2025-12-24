@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0b0f2b, #120b2e);
+  color: white;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  padding: 20px;
+}
+
+.logo {
+  font-size: 36px;
+  color: #4cc9f0;
+  text-shadow: 0 0 15px #6a5cff;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 20px;
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6a5cff, #3a0ca3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  box-shadow: 0 0 30px #6a5cff;
+}
+
+.hero h2 {
+  margin-top: 30px;
+  color: #4cc9f0;
+}
+
+.open {
+  color: #4cff9f;
+  font-weight: bold;
+}
+
+.small {
+  opacity: 0.8;
+}
+
+/* CARD */
+.card {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1b1f4a, #0f1235);
+  box-shadow: 0 0 25px rgba(106,92,255,0.4);
+}
+
+/* GALLERY */
+.gallery {
+  padding: 50px 20px;
+}
+
+.image-box img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #6a5cff;
+}
+
+/* ABOUT */
+.about {
+  padding: 60px 20px;
+}
+
+.about h1 {
+  font-size: 40px;
+  color: #6a5cff;
+  text-shadow: 0 0 20px #3a0ca3;
+}
+
+.about p {
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+/* BUTTON */
+.main-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #6a5cff, #4cc9f0);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 0 20px #6a5cff;
+  cursor: pointer;
+}
+
+.est {
+  display: block;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+/* DISCORD */
+.discord {
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  opacity: 0.6;
+}
