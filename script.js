@@ -1,11 +1,12 @@
 // 🔥 FIREBASE CONFIG
 const firebaseConfig = {
-  apiKey: "PASTE YOUR apiKey HERE",
-  authDomain: "PASTE YOUR authDomain HERE",
-  projectId: "PASTE YOUR projectId HERE",
-  storageBucket: "PASTE YOUR storageBucket HERE",
-  messagingSenderId: "PASTE YOUR messagingSenderId HERE",
-  appId: "PASTE YOUR appId HERE"
+  apiKey: "AIzaSyDxdLjwvvhLIV0tULwH10wdS6qVvrquRmE",
+  authDomain: "acf-website-7537c.firebaseapp.com",
+  projectId: "acf-website-7537c",
+  storageBucket: "acf-website-7537c.firebasestorage.app",
+  messagingSenderId: "1049401061130",
+  appId: "1:1049401061130:web:0e4ced9adda21e3a7594f3",
+  measurementId: "G-6YFPFQP19W"
 };
 
 // INIT FIREBASE
