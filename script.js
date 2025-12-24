@@ -1,3 +1,9 @@
+/* 🎄 LOADER HIDE */
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("loader").classList.add("hide");
+  }, 1800); // 1.8 seconds
+});
 /* 🔔 BUTTON SOUND */
 const bell = document.getElementById("bell");
 document.querySelectorAll(".main-btn").forEach(btn => {
