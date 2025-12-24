@@ -6,13 +6,13 @@
 }
 
 body {
-  background: linear-gradient(180deg, #080a24, #120b2e);
+  background: linear-gradient(180deg, #07091f, #120b2e);
   color: white;
   text-align: center;
   overflow-x: hidden;
 }
 
-/* SNOW */
+/* ❄️ Snow */
 #snow {
   position: fixed;
   inset: 0;
@@ -20,7 +20,56 @@ body {
   z-index: 1;
 }
 
-/* HEADER */
+/* 🎄 Loader */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #080a24, #02030f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid rgba(106,92,255,0.25);
+  border-top: 6px solid #4cc9f0;
+  animation: spin 1.5s linear infinite;
+  box-shadow: 0 0 30px #6a5cff;
+}
+
+.loader-text {
+  margin-top: 20px;
+  font-size: 42px;
+  color: #4cc9f0;
+  text-shadow: 0 0 25px #6a5cff;
+}
+
+.loader-sub {
+  opacity: 0.8;
+}
+
+.loader-christmas {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4cff9f;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Header */
 header {
   padding: 20px;
   position: relative;
@@ -33,7 +82,7 @@ header {
   text-shadow: 0 0 20px #6a5cff;
 }
 
-/* HERO */
+/* Hero */
 .hero {
   padding: 60px 20px;
   position: relative;
@@ -68,7 +117,7 @@ header {
   opacity: 0.8;
 }
 
-/* CARD */
+/* Card */
 .card {
   margin: 40px auto;
   width: 90%;
@@ -77,69 +126,17 @@ header {
   border-radius: 20px;
   background: linear-gradient(145deg, #1b1f4a, #0f1235);
   box-shadow: 0 0 30px rgba(106,92,255,0.5);
-  z-index: 2;
-  position: relative;
-}
-
-/* GALLERY */
-.gallery {
-  padding: 60px 20px;
   position: relative;
   z-index: 2;
 }
 
-.slider {
-  position: relative;
-  width: 90%;
-  max-width: 420px;
-  margin: auto;
+.tagline {
+  margin-top: 10px;
+  letter-spacing: 2px;
+  opacity: 0.9;
 }
 
-.slide {
-  width: 100%;
-  border-radius: 18px;
-  display: none;
-  box-shadow: 0 0 25px #6a5cff;
-}
-
-.slide.active {
-  display: block;
-}
-
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
-  border: none;
-  color: white;
-  font-size: 22px;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.left { left: -10px; }
-.right { right: -10px; }
-
-.dots {
-  margin-top: 15px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 4px;
-  display: inline-block;
-  background: #555;
-  border-radius: 50%;
-}
-
-.dot.active {
-  background: #6a5cff;
-}
-
-/* ABOUT */
+/* About */
 .about {
   padding: 70px 20px;
   position: relative;
@@ -147,25 +144,29 @@ header {
 }
 
 .about h1 {
-  font-size: 42px;
+  font-size: 40px;
   color: #6a5cff;
   text-shadow: 0 0 25px #3a0ca3;
 }
 
-.about p {
-  letter-spacing: 2px;
+.desc {
+  margin-top: 15px;
+  opacity: 0.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* BUTTON */
+/* Button */
 .main-btn {
+  display: inline-block;
   margin-top: 30px;
   padding: 16px 34px;
   border-radius: 40px;
   background: linear-gradient(90deg, #6a5cff, #4cc9f0);
   color: white;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
   box-shadow: 0 0 30px #6a5cff;
   transition: transform 0.2s;
 }
@@ -180,149 +181,10 @@ header {
   opacity: 0.7;
 }
 
-/* DISCORD */
-.discord {
-  padding: 60px 20px;
-  background: rgba(0,0,0,0.25);
-  position: relative;
-  z-index: 2;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
   padding: 20px;
   opacity: 0.6;
   position: relative;
   z-index: 2;
-}
-.est {
-  display: block;
-  margin-top: 15px;
-  opacity: 0.7;
-}
-
-/* DISCORD */
-.discord {
-  padding: 60px 20px;
-  background: rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer {
-  padding: 20px;
-  opacity: 0.6;
-}
-/* 🎄 LOADING SCREEN */
-#loader {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle, #080a24, #02030f);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 1s ease, visibility 1s ease;
-}
-
-#loader.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader-ring {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 6px solid rgba(106,92,255,0.2);
-  border-top: 6px solid #4cc9f0;
-  animation: spin 1.5s linear infinite;
-  box-shadow: 0 0 30px #6a5cff;
-}
-
-.loader-text {
-  margin-top: 20px;
-  font-size: 42px;
-  color: #4cc9f0;
-  text-shadow: 0 0 25px #6a5cff;
-}
-
-.loader-sub {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-top: 5px;
-}
-
-.loader-christmas {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #4cff9f;
-}
-/* 🔐 ADMIN PANEL */
-.admin {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #0f1235;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 0 20px #6a5cff;
-  z-index: 9999;
-  width: 260px;
-}
-
-.admin h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.admin input, .admin textarea {
-  width: 100%;
-  margin: 6px 0;
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-}
-
-.admin button {
-  width: 100%;
-  margin-top: 6px;
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-  background: linear-gradient(90deg,#6a5cff,#4cc9f0);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.note {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-top: 6px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* MEMBERS */
-.members {
-  padding: 60px 20px;
-}
-
-.members ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.members li {
-  margin: 6px 0;
-  padding: 10px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  box-shadow: 0 0 10px rgba(106,92,255,0.3);
-}
-@keyframes spin {
-  to { transform: rotate(360deg); }
 }
