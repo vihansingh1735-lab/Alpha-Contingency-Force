@@ -1,4 +1,16 @@
-/* 🎄 LOADER HIDE */
+// 🔥 FIREBASE CONFIG
+const firebaseConfig = {
+  apiKey: "PASTE YOUR apiKey HERE",
+  authDomain: "PASTE YOUR authDomain HERE",
+  projectId: "PASTE YOUR projectId HERE",
+  storageBucket: "PASTE YOUR storageBucket HERE",
+  messagingSenderId: "PASTE YOUR messagingSenderId HERE",
+  appId: "PASTE YOUR appId HERE"
+};
+
+// INIT FIREBASE
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();/* 🎄 LOADER HIDE */
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("loader").classList.add("hide");
@@ -125,11 +137,26 @@ function addGallery() {
 }
 
 /* SAVE GALLERY */
-function saveGallery() {
-  const imgs = [...document.querySelectorAll(".slider img")].map(i => i.src);
-  localStorage.setItem("acf_gallery", JSON.stringify(imgs));
+/* 📸 SAVE GALLERY (ADMIN ONLY) */
+function addGallery() {
+  const url = document.getElementById("gallery-url").value;
+  if (!url) return;
+
+  db.collection("gallery").doc("images").get().then(doc => {
+    const urls = doc.exists ? doc.data().urls : [];
+    urls.push(url);
+
+    db.collection("gallery").doc("images").set({ urls });
+  });
 }
 
+/* 👥 SAVE MEMBERS (ADMIN ONLY) */
+function saveMembers() {
+  const text = document.getElementById("members-text").value;
+  const names = text.split("\n").filter(Boolean);
+
+  db.collection("members").doc("list").set({ names });
+}
 /* LOAD GALLERY */
 const savedGallery = JSON.parse(localStorage.getItem("acf_gallery") || "[]");
 savedGallery.forEach(url => {
