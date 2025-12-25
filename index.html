@@ -4,65 +4,12 @@
   <meta charset="UTF-8" />
   <title>Alpha Contingency Force | Christmas Ops</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Main Styles -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Inline critical styles for logo circle -->
-  <style>
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .acf-circle {
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: radial-gradient(circle at top, #6a5cff, #2a1d73);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 40px auto 20px;
-      box-shadow: 0 0 55px rgba(106, 92, 255, 0.75);
-      animation: pulseGlow 3s infinite ease-in-out;
-    }
-
-    .acf-circle img {
-      width: 65%;
-      height: 65%;
-      object-fit: contain;
-      filter: drop-shadow(0 0 12px rgba(255,255,255,0.5));
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 35px rgba(106, 92, 255, 0.5); }
-      50% { box-shadow: 0 0 70px rgba(106, 92, 255, 0.95); }
-      100% { box-shadow: 0 0 35px rgba(106, 92, 255, 0.5); }
-    }
-
-    .open {
-      color: #3cff8f;
-      font-weight: 600;
-    }
-
-    .small {
-      opacity: 0.8;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      .acf-circle {
-        width: 200px;
-        height: 200px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- ❄️ Snow Canvas -->
+<!-- ❄️ Snow -->
 <canvas id="snow"></canvas>
 
 <!-- 🎄 Loader -->
@@ -73,19 +20,15 @@
   <p class="loader-christmas">❄️ Christmas Operations Loading...</p>
 </div>
 
-<!-- 🔰 Header -->
 <header>
   <h1 class="logo">ACF</h1>
 </header>
 
-<!-- 🚀 Hero Section -->
+<!-- 🚀 HERO -->
 <section class="hero">
 
-  <!-- 🔵 LOGO CIRCLE (REPLACED COMING SOON CIRCLE) -->
-  <div class="acf-circle">
-    <!-- CHANGE THIS PATH TO YOUR LOGO -->
-    <img src="https://cdn.discordapp.com/attachments/1451114152008351879/1453647900096856199/lv_0_20251224215615.jpg?ex=694e369a&is=694ce51a&hm=af2ff1aa4633cb4df30363511bcebc66310532b90f6bc272d1caf500b2f073d9&" alt="ACF Logo">
-  </div>
+  <!-- ✅ LOGO CIRCLE (NO IMG TAG) -->
+  <div class="acf-circle"></div>
 
   <h2>COMING SOON</h2>
   <h3>POSITION FILLING</h3>
@@ -94,39 +37,29 @@
 
 </section>
 
-<!-- 🛡️ Card -->
 <section class="card">
   <h2>SECURITY FORCE</h2>
   <p class="tagline">PROTECTION • UNITY • EXCELLENCE</p>
 </section>
 
-<!-- ℹ️ About -->
 <section class="about">
   <h1>ALPHA CONTINGENCY FORCE</h1>
-
   <p class="desc">
     Elite response unit operating under winter protocols.
     Precision, coordination, and discipline define ACF.
   </p>
 
-  <a
-    href="https://discord.gg/DjmVrPkxT2"
-    target="_blank"
-    class="main-btn"
-  >
+  <a href="https://discord.gg/DjmVrPkxT2" target="_blank" class="main-btn">
     🎄 Join Our Discord
   </a>
 
   <span class="est">EST. 2025</span>
 </section>
 
-<!-- ⚓ Footer -->
 <footer>
-  <p>© 2025 Alpha Contingency Force | Merry Christmas ❄️</p>
+  <p>© 2025 Alpha Contingency Force | Christmas ❄️</p>
 </footer>
 
-<!-- Scripts -->
 <script src="script.js"></script>
-
 </body>
 </html>
