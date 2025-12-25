@@ -30,12 +30,6 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 1s ease, visibility 1s ease;
-}
-
-#loader.hide {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .loader-ring {
@@ -46,23 +40,6 @@ body {
   border-top: 6px solid #4cc9f0;
   animation: spin 1.5s linear infinite;
   box-shadow: 0 0 30px #6a5cff;
-}
-
-.loader-text {
-  margin-top: 20px;
-  font-size: 42px;
-  color: #4cc9f0;
-  text-shadow: 0 0 25px #6a5cff;
-}
-
-.loader-sub {
-  opacity: 0.8;
-}
-
-.loader-christmas {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #4cff9f;
 }
 
 @keyframes spin {
@@ -79,7 +56,6 @@ header {
 .logo {
   font-size: 38px;
   color: #4cc9f0;
-  text-shadow: 0 0 20px #6a5cff;
 }
 
 /* Hero */
@@ -89,35 +65,31 @@ header {
   z-index: 2;
 }
 
-/* 🔵 ACF LOGO CIRCLE (REPLACED OLD .circle) */
+/* 🔵 FINAL LOGO CIRCLE */
 .acf-circle {
   width: 200px;
   height: 200px;
-  margin: auto;
+  margin: 30px auto;
   border-radius: 50%;
-  background: radial-gradient(circle at top, #6a5cff, #3a0ca3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 50px rgba(106,92,255,0.9);
+
+  /* LOGO BACKGROUND */
+  background-image: url("acf-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 0 60px rgba(106,92,255,0.9);
   animation: pulseGlow 3s infinite ease-in-out;
-}
-.acf-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  filter: drop-shadow(0 0 14px rgba(255,255,255,0.6));
 }
 
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 35px rgba(106,92,255,0.6); }
-  50% { box-shadow: 0 0 65px rgba(106,92,255,1); }
+  50% { box-shadow: 0 0 70px rgba(106,92,255,1); }
   100% { box-shadow: 0 0 35px rgba(106,92,255,0.6); }
 }
 
 .hero h2 {
-  margin-top: 30px;
+  margin-top: 25px;
   color: #4cc9f0;
 }
 
@@ -138,39 +110,13 @@ header {
   padding: 30px;
   border-radius: 20px;
   background: linear-gradient(145deg, #1b1f4a, #0f1235);
-  box-shadow: 0 0 30px rgba(106,92,255,0.5);
-  position: relative;
-  z-index: 2;
-}
-
-.tagline {
-  margin-top: 10px;
-  letter-spacing: 2px;
-  opacity: 0.9;
 }
 
 /* About */
 .about {
   padding: 70px 20px;
-  position: relative;
-  z-index: 2;
 }
 
-.about h1 {
-  font-size: 40px;
-  color: #6a5cff;
-  text-shadow: 0 0 25px #3a0ca3;
-}
-
-.desc {
-  margin-top: 15px;
-  opacity: 0.9;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Button */
 .main-btn {
   display: inline-block;
   margin-top: 30px;
@@ -178,28 +124,12 @@ header {
   border-radius: 40px;
   background: linear-gradient(90deg, #6a5cff, #4cc9f0);
   color: white;
-  font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0 30px #6a5cff;
-  transition: transform 0.2s;
 }
 
-.main-btn:hover {
-  transform: scale(1.05);
-}
-
-.est {
-  display: block;
-  margin-top: 15px;
-  opacity: 0.7;
-}
-
-/* Footer */
 footer {
   padding: 20px;
   opacity: 0.6;
-  position: relative;
-  z-index: 2;
 }
 
 /* 📱 Mobile */
@@ -207,9 +137,5 @@ footer {
   .acf-circle {
     width: 180px;
     height: 180px;
-  }
-
-  .about h1 {
-    font-size: 32px;
   }
 }
