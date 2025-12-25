@@ -89,18 +89,31 @@ header {
   z-index: 2;
 }
 
-.circle {
-  width: 180px;
-  height: 180px;
+/* 🔵 ACF LOGO CIRCLE (REPLACED OLD .circle) */
+.acf-circle {
+  width: 220px;
+  height: 220px;
   margin: auto;
   border-radius: 50%;
-  background: radial-gradient(circle, #6a5cff, #3a0ca3);
+  background: radial-gradient(circle at top, #6a5cff, #3a0ca3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  font-weight: bold;
-  box-shadow: 0 0 40px #6a5cff;
+  box-shadow: 0 0 50px rgba(106,92,255,0.9);
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.acf-circle img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.5));
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 35px rgba(106,92,255,0.6); }
+  50% { box-shadow: 0 0 65px rgba(106,92,255,1); }
+  100% { box-shadow: 0 0 35px rgba(106,92,255,0.6); }
 }
 
 .hero h2 {
@@ -187,4 +200,16 @@ footer {
   opacity: 0.6;
   position: relative;
   z-index: 2;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .acf-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about h1 {
+    font-size: 32px;
+  }
 }
