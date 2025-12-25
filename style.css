@@ -30,6 +30,12 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .loader-ring {
@@ -46,6 +52,22 @@ body {
   to { transform: rotate(360deg); }
 }
 
+.loader-text {
+  margin-top: 20px;
+  font-size: 42px;
+  color: #4cc9f0;
+}
+
+.loader-sub {
+  opacity: 0.8;
+}
+
+.loader-christmas {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4cff9f;
+}
+
 /* Header */
 header {
   padding: 20px;
@@ -56,6 +78,7 @@ header {
 .logo {
   font-size: 38px;
   color: #4cc9f0;
+  text-shadow: 0 0 20px #6a5cff;
 }
 
 /* Hero */
@@ -65,19 +88,16 @@ header {
   z-index: 2;
 }
 
-/* 🔵 FINAL LOGO CIRCLE */
+/* 🔵 Logo Circle (IMAGE LINK USED HERE) */
 .acf-circle {
   width: 200px;
   height: 200px;
   margin: 30px auto;
   border-radius: 50%;
-
-  /* LOGO BACKGROUND */
-  background-image: url("acf-logo.png");
+  background-image: url("https://cdn.discordapp.com/attachments/1451114152008351879/1453647900096856199/lv_0_20251224215615.jpg?ex=694e369a&is=694ce51a&hm=af2ff1aa4633cb4df30363511bcebc66310532b90f6bc272d1caf500b2f073d9&");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   box-shadow: 0 0 60px rgba(106,92,255,0.9);
   animation: pulseGlow 3s infinite ease-in-out;
 }
@@ -110,6 +130,7 @@ header {
   padding: 30px;
   border-radius: 20px;
   background: linear-gradient(145deg, #1b1f4a, #0f1235);
+  box-shadow: 0 0 30px rgba(106,92,255,0.5);
 }
 
 /* About */
@@ -117,6 +138,16 @@ header {
   padding: 70px 20px;
 }
 
+.about h1 {
+  color: #6a5cff;
+}
+
+.desc {
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* Button */
 .main-btn {
   display: inline-block;
   margin-top: 30px;
@@ -125,8 +156,16 @@ header {
   background: linear-gradient(90deg, #6a5cff, #4cc9f0);
   color: white;
   text-decoration: none;
+  box-shadow: 0 0 30px #6a5cff;
 }
 
+.est {
+  display: block;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+/* Footer */
 footer {
   padding: 20px;
   opacity: 0.6;
@@ -135,7 +174,7 @@ footer {
 /* 📱 Mobile */
 @media (max-width: 600px) {
   .acf-circle {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
   }
 }
